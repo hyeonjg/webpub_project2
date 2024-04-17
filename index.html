@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>일리 95주년</title>
+	<style type="text/css">
+
+	@font-face {
+    font-family: 'KBIZHanmaumMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumMyungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+		@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+	@font-face {
+    font-family: 'KCC-eunyoung';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+		@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+	
+		html{
+			font-family: "SUIT-Regular";
+			font-size:1rem; line-height: 1.5;
+			--main-color: #E92626;
+			--sub-color: lightyellow;
+			word-break: keep-all;
+			scroll-behavior: smooth;
+		}
+
+		body,h1,h2,h3,h4,h5,p,ul{margin: 0; padding: 0;}
+		h1,h2,h3{line-height: 1.3;}
+		h1{font-family: KBIZHanmaumMyungjo; font-size: 5rem;}
+		h2{font-size: 3rem; line-height: 70px; margin: 10px 0px;}
+		h3{font-family: KCC-eunyoung; font-size: 4rem;
+			padding: 10px 0px;}
+		h4{font-size: 1.3rem;
+			margin: 10px 0px;}
+		h5{font-size: 1.6rem; margin: 10px 0px;}
+		p{font-size: 1rem; line-height: 32px;}
+
+		.wrap{
+			width: 800px; margin: auto; display: table;
+		}
+		.flex{
+			display: flex; justify-content: space-around;}
+		.flex-nav{display: flex; justify-content: space-between;
+			align-items: center}
+		.blank{height: 200px;}
+		.blank-nav{height: 138px;}
+		.blank-s{height: 50px;}
+		.fix{position: fixed; top:0; left:0; right:0; z-index: 5}
+
+		.h500{height: 500px;}
+		.h300{height: 300px;}
+		.f60{width:60%; padding:20px;}
+		.f50{width:50%; padding:20px;}
+		.f40{width:40%; padding:20px;}
+		.f33{width:33%; padding:20px;}
+		.f25{width:25%; padding:20px;}
+		.p10{padding: 10px 0px;}
+		.v-center{display: table-cell; vertical-align: middle;}
+		.top-padding{padding-top: 20px;}
+		.top-padding2{padding-top: 40px;}
+
+		.full-img{width: 100%;}
+		.text-center{text-align: center;}
+		.text-right{text-align: right;}
+
+		.t-white{color:white;}
+		.t-main{color:var(--main-color);}
+
+		.bg-header{
+			background: url(source/header_coffee.gif);
+			background-size:100%;
+			object-fit: cover; overflow:hidden;
+		}
+		.bg-main{background: var(--main-color);}
+		.bg-sub{background: var(--sub-color);}
+		.bg-black{background: black;}
+		.bg-flavor1{
+			position: relative;
+			background: url(source/flavor_1_bg_w.jpg);
+			background-size:100%;
+			object-fit: cover; overflow:hidden;
+		}
+		.bg-flavor2{
+			background: url(source/flavor_2_bg_w.jpg);
+			background-size:100%;
+			object-fit: cover; overflow:hidden;
+		}
+		.bg-flavor3{
+			background: url(source/flavor_3_bg_w.jpg);
+			background-size:100%;
+			object-fit: cover; overflow:hidden;
+		}
+
+		.bullet{
+			position: fixed; top:35%; left:5%;
+			height:400px;
+			display: flex; z-index: 5;
+			flex-direction: column; align-items: center;
+		}
+		.bullet a{
+			text-decoration: none;
+			font-family: KCC-eunyoung; font-size: 1.5rem;
+			color: black; text-shadow: 0px 0px 18px white;
+			text-align: left;
+			padding: 50px 0px;
+		}
+		.bullet a:hover{
+			color: var(--main-color);
+		}
+
+		nav{padding: 25px 0px;}
+		nav ul li{list-style: none; margin:10px;}
+		nav ul li:hover{
+			color: var(--main-color);
+		}
+		nav .flex{ justify-content: center;}
+		.nav-f2{width: 20%}
+		.nav-f6{width: 60%}
+
+		header div a{
+			text-align: center;
+			color: white; text-decoration: none;
+			padding: 10px 40px;
+			border: 1px solid white;
+			border-radius: 10px;
+			position: absolute; top:65%; left:46%;
+		}
+		header div a:hover{
+			color: rgba(0,0,0,0);
+			background: white;
+			color: var(--main-color);
+		}
+		.moving-text{
+			animation: moving-text 1s ;
+		}
+		@keyframes moving-text{
+			from{padding-left: 50px;}
+			to{padding-left: 0px;}
+		}
+		.moving-text2{
+			animation: moving-text 2s;
+		}
+		@keyframes moving-text2{
+			from{padding-left: 100px;}
+			to{padding-left: 0px;}
+		}
+
+		.img-history{
+			display: block; margin: auto;
+			width: 300px; height: 300px;
+		}
+
+		.img-slide input[id*='slide']{display: none;}
+		.img-slide .slide-wrap{
+			max-width: 800px;
+			margin: auto;
+			overflow: hidden;
+		}
+		.img-slide .slide-li{
+			white-space: nowrap; font-size: 0;
+		}
+		.img-slide .slide-li li{
+			display: inline-block; vertical-align: middle;
+			width:100%; transition:all .5s;
+		}
+		.img-slide .slide-li li a{
+			display: block; position: relative;
+		}
+		.img-slide .slide-li li a img{
+			width:100%;
+		}
+		.img-slide .slide-li label{
+			position: absolute; z-index: 4;
+			top:50%; 
+			transform: translateY(-50%);
+			padding: 50px; cursor: pointer;
+		}
+		.img-slide .slide-li .slide-left{
+			left: 30px;
+			background: url('source/slide_left.png') center center / 100%;
+		}
+		.img-slide .slide-li .slide-right{
+			right: 30px;
+			background: url('source/slide_right.png') center center / 100%;
+		}
+		.img-slide [id='slide1']:checked ~ .slide-wrap .slide-li li {transform: translateX(0%);}
+		.img-slide [id='slide2']:checked ~ .slide-wrap .slide-li li {transform: translateX(-100%);}
+		.img-slide [id='slide3']:checked ~ .slide-wrap .slide-li li {transform: translateX(-200%);}
+
+		.img-flavor{width:294px; height:248px;}
+
+		#shops a{
+			text-align: center;
+			color: black; text-decoration: none;
+			padding: 10px 40px; margin: 30px 0px;
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+		#shops a:hover{
+			color: rgba(0,0,0,0);
+			background: var(--main-color);
+			color: black;
+			border: 1px solid var(--main-color);
+		}
+
+		footer{background: #2E2E2E; color: white; padding: 20px 0px;}
+		footer ul li{list-style: none;}
+
+
+	</style>
+</head>
+
+<body>
+
+	<section class='bullet'>
+		<a href='#history'>history</a>
+		<a href='#package'>package</a>
+		<a href='#shop'>shop</a>
+	</section>
+
+	<section class='fix'>
+	<section class='bg-main'>
+		<div class='wrap text-center p10'>
+			<p>95주년 특별 패키지 판매 종료까지 6일!</p>
+		</div>
+	</section>
+
+	<nav class='bg-black t-white'>
+		<div class='wrap flex-nav'>
+			<div class='nav-f2'>
+			<a href='#top'>
+			<img src='source/logo.png' width=25px; height=25px;>
+			</a>
+			</div>
+			<ul class='nav-f6 flex'>
+				<li>구독</li>
+				<li>커피</li>
+				<li>머신</li>
+				<li>아트컬렉션</li>
+				<li>액세서리</li>
+				<li>세트</li>
+				<li>브랜드</li>
+			</ul>
+			<ul class='nav-f2 flex'>
+				<li>장바구니</li>
+				<li>로그인</li>
+			</ul>
+		</div>
+	</nav>
+	</section>
+
+
+	<div id='top' class='blank-nav'></div>
+
+	<header class='bg-header'>
+		<div class='wrap h500'>
+			<div class='v-center t-white'>
+				<h1 class='moving-text'>95주년을 기념합니다</h1>
+				<h4 class='moving-text2'>일리가 커피와 함께해온 시간을 소개합니다.</h4>
+			</div>
+			<a href="#shop">shop</a>
+		</div>
+	</header>
+
+	<div class='blank'></div>
+
+	<section class='bg-sub'>
+		<div class='wrap h500'>
+			<div class='text-center v-center'>
+			<h2>완벽한 커피 한 잔의 즐거움을 추구하다</h2>
+			<p>2028년, 올해로 일리는 95주년을 맞이합니다.<br>일리는 늘 감사의 마음을 담아 여러분과 함께<br>기념일을 축하하기 위해 여러 활동을 이어왔습니다.<br>부디 이번에도 커피 한 잔과 함께<br>일리의 이야기를 즐겨주시기 바랍니다.</p>
+		</div>
+		</div>
+	</section>
+
+	<div id='history' class='blank'></div>
+
+	<section>
+		<div class='wrap'>
+			<div class='text-center'>
+				<h3>illy's history</h3>
+				<hr style='border: solid 1px'>
+				<h4>일리의 역사를 소개합니다.</h4>
+			</div>
+			<div class='blank-s'></div>
+			<div>
+				<div class='flex'>
+					<div class='f50 text-right'>
+					<h2>1933</h2>
+					<h4>일리카페의 시작</h4>
+					<p>헝가리 출신의 프란체스코 일리가 제1차 세계 대전이 끝나고 비엔나에서 ‘커피의 수도'라 불리는 이탈리아 트리에스테로 향했습니다. 1933년 그는 세상에서 가장 좋은 커피를 제공한다는 꿈을 가지고 일리카페를 설립했습니다.</p>
+					</div>
+					<div class='f50 text-center flex'>
+					<img class='img-history' src='source/history_1.png'>
+					</div>
+				</div>
+
+				<div class='flex'>
+					<div class='f50 text-center flex'>
+					<img class='img-history' src='source/history_2.png'>
+					</div>
+					<div class='f50'>
+					<h2>1934</h2>
+					<h4>질소압축포장 개발</h4>
+					<p>illycaffè는 1934년 질소압축포장을 개발했습니다.포장내의 산소를 100% 제거한후 압축된 질소를 가압한 일리커피의 질소압축포장법은 포장내에서 커피가 숙성하여 갓 배전된 다른 커피 원두보다 신선하고 향과 향미가 강합니다. 일리커피가 아로마와 신선함을 유지할 수 있는 이유입니다.</p>
+					</div>
+				</div>
+
+				<div class='flex text-right'>
+					<div class='f50'>
+					<h2>1935</h2>
+					<h4>압축식 커피머신 개발</h4>
+					<p>자사 최초의 커피머신 모델인 "일레따"는 증기를 압축공기로 대체하는 혁신적인 에스프레소 커피기계로, 근대 커피 머신의 발전에 지대한 공헌을 했습니다. 증기압을 이용한 이전 방식에서는 낮았던 추출 압력을 1.5bar로 높였습니다.</p>
+					</div>
+					<div class='f50 text-center flex'>
+					<img class='img-history' src='source/history_3.png'>
+					</div>
+				</div>
+
+				<div class='flex'>
+					<div class='f50 text-center flex'>
+					<img class='img-history' src='source/history_4.png'>
+					</div>
+					<div class='f50'>
+					<h2>1974</h2>
+					<h4>최초로 1인용 분쇄커피 파드 판매</h4>
+					<p>일리가 커피 시장 처음으로 언제 어디서나 완벽한 에스프레소를 만들어주는 탬핑된 1인용 분쇄 커피, 파드를 출시했습니다. 이것은 커피 역사의 급진적인 혁신과 더불어 일리의 국제화를 위한 길을 열어주었습니다.</p>
+					</div>
+				</div>
+
+				<div class='flex text-right'>
+					<div class='f50'>
+					<h2>1997</h2>
+					<h4>아로마 랩 설립, 끝 없는 연구</h4>
+					<p>일리카페가 시작한 트리에스테의 사이언스 파크에 아로마 랩이 설립되었습니다. 독특한 아로마 연구를 위해 끝 없는 연구를 계속했고, 대학 기관과도 협력해 커피 전문가를 양성했습니다. 이는 브라질 상파울루대와 협력해 ‘유니버시다데 일리 드 카페'라는 커피 전문대학까지 설립으로까지 이어졌습니다.</p>
+					</div>
+					<div class='f50 text-center flex'>
+					<img class='img-history' src='source/history_5.png'>
+					</div>
+				</div>
+
+				<div class='flex'>
+					<div class='f50 text-center flex'>
+					<img class='img-history' src='source/history_6.png'>
+					</div>
+					<div class='f50'>
+					<h2>2011</h2>
+					<h4>지속가능성을 추구하다</h4>
+					<p>안드레아 일리가 지속 가능성 인증을 위한 아이디어를 발표했습니다. 일리는 사회적, 환경적으로 지속가능성을 추구하고 있습니다. 이를 위해 커피 재배 농가와 직접 계약을 맺고 전문적인 생산기술과 지식을 전수하고, 플라스틱 캡슐이 아닌 종이에 원두가 들어있는 파드를 제작하는 등의 노력을 이어나가고 있습니다. </p>
+					</div>
+				</div>
+
+				<div class='flex'>
+					<div class='f50 text-center'>
+					<h2>2028</h2>
+					<h4>그리고, 일리의 지금</h4>
+					<p>일리는 세계의 커피 문화를 선도하는 기업이 되었습니다. 그럼에도 이에 안주하지 않고 지금도 끝없는 연구와 노력을 계속하며 완벽한 커피의 향과 맛을 추구하고 있습니다. </p>
+					</div>
+				</div>
+			</div>
+			<div></div>
+		</div>
+	</section>
+
+	<div class='blank'></div>
+
+	<section class='t-main'>
+		<div class='wrap h500 text-center top-padding'>
+			<h4>예술을 사랑하는 일리의<br>지난 아트 컬렉션을 함께 감상하시죠.</h4>
+
+			<div class='img-slide'>
+				<input type='radio' name='slide' id='slide1' 
+				checked>
+				<input type='radio' name='slide' id='slide2'>
+				<input type='radio' name='slide' id='slide3'>
+
+				<div class='slide-wrap'>
+					<ul class='slide-li'>
+						<li>
+							<a>
+								<label for='slide3' class='slide-left'></label>
+								<img src='source/art_1.png'>
+								<label for='slide2' class='slide-right'></label>
+							</a>
+						</li>
+						<li>
+							<a>
+								<label for='slide1' class='slide-left'></label>
+								<img src='source/art_2.png'>
+								<label for='slide3' class='slide-right'></label>
+							</a>
+						</li>
+						<li>
+							<a>
+								<label for='slide2' class='slide-left'></label>
+								<img src='source/art_3.png'>
+								<label for='slide1' class='slide-right'></label>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class='blank'></div>
+
+	<section>
+		<div class='wrap'>
+			<div class='text-center v-center'>
+			<h2>일리와 예술을 떼 놓을 수는 없다는 사실,<br>느껴지시나요?<br>그래서 준비했습니다.</h2>
+			</div>
+		</div>
+	</section>
+
+	<div id='package' class='blank'></div>
+
+	<section>
+		<div class='wrap'>
+			<div class='text-center'>
+				<h3>package</h3>
+				<hr style='border: solid 1px'>
+				<h4>95주년 기념 특별 패키지를 소개합니다.</h4>
+			</div>
+			<div class='blank-s'></div>
+			<img src="source/box_full.jpg" class='full-img'>
+		</div>
+	</section>
+
+	<div class='blank'></div>
+
+	<section class='bg-main t-white'>
+		<div class='wrap h300'>
+			<div class='text-center v-center'>
+				<h3>일리의 대표 블렌드<br>클라시코, 인텐소, 디카페인 3종을<br>95주년 한정판 에디션으로!</h3>
+			</div>
+		</div>
+	</section>
+
+	<div class='blank'></div>
+
+	<section>
+		<div class='wrap'>
+			<div class='text-center'>
+				<h3>illy blend</h3>
+				<hr style='border: solid 1px'>
+				<h4>일리의 오리지널 블렌드를 소개합니다.</h4>
+			</div>
+		</div>
+	</section>
+
+	<div class='blank-s'></div>
+
+	<section class='bg-flavor1'>
+		<div class='flex wrap h300'>
+			<div class='wrap'>
+			<img class='img-flavor v-center' src='source/flavor_1.png'>
+			</div>
+			<div class='wrap'>
+			<div class='text-center v-center'>
+				<h3>클라시코</h3>
+				<h4>카라멜 오렌지꽃 자스민</h4>
+				<p>어울리는 메뉴<br>카페라떼, 오렌지라떼</p>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<div class='blank-s'></div>
+
+	<section class='bg-flavor2'>
+		<div class='flex wrap h300'>
+			<div class='wrap'>
+			<div class='text-center v-center'>
+				<h3>인텐소</h3>
+				<h4>코코아 건과일</h4>
+				<p>어울리는 메뉴<br>아메리카노, 카페모카</p>
+			</div>
+			</div>
+			<div class='wrap'>
+			<img class='img-flavor v-center' src='source/flavor_2.png'>
+			</div>
+		</div>
+	</section>
+
+	<div class='blank-s'></div>
+
+	<section class='bg-flavor3'>
+		<div class='flex wrap h300'>
+			<div class='wrap'>
+			<img class='img-flavor v-center' src='source/flavor_3.png'>
+			</div>
+			<div class='wrap'>
+			<div class='text-center v-center'>
+				<h3>디카페인</h3>
+				<h4>카라멜 구운 빵 초콜릿</h4>
+				<p>어울리는 메뉴<br>콜드브루, 아인슈페너</p>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<div id='shop' class='blank'></div>
+
+	<section id='shops'>
+		<div class='flex wrap'>
+			<div class='f33 text-center'>
+				<img src='source/box_3.jpg'>
+				<h5>3종 세트</h5>
+				<a>담기</a>
+			</div>
+			<div class='f33 text-center'>
+				<img src='source/box_2.jpg'>
+				<h5>2종 세트</h5>
+				<a>담기</a>
+			</div>
+			<div class='f33 text-center'>
+				<img src='source/box_1.jpg'>
+				<h5>1종 세트</h5>
+				<a>담기</a>
+			</div>
+		</div>
+	</section>
+
+	<div class='blank'></div>
+
+	<footer>
+		<div class='flex wrap'>
+			<div class='f40 top-padding2'>
+				<h4>일리,<br>당신을 위한<br>깊은 풍미</h4>
+			</div>
+			<div class='flex f60'>
+				<div class="f25">
+					<h5>브랜드</h5>
+					<ul>
+						<li>브랜드</li>
+						<li>히스토리</li>
+						<li>뉴스</li>
+					</ul>
+				</div>
+				<div class="f25">
+					<h5>카페</h5>
+					<ul>
+						<li>일리카페</li>
+						<li>가맹안내</li>
+					</ul>
+				</div>
+				<div class="f25">
+					<h5>커피</h5>
+					<ul>
+						<li>공식사이트</li>
+						<li>정기구독</li>
+					</ul>
+				</div>
+				<div class="f25">
+					<h5>사이트</h5>
+					<ul>
+						<li>FAQ</li>
+						<li>고객센터</li>
+						<li>이용약관</li>
+						<li>개인정보처리방</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr style='border: solid 1px'>
+		<div class='flex wrap'>
+			<div class='f40'>
+				<p>(주) 일리커피</p>
+				<p>대표자 김일리</p>
+				<p>주소 대한민국 일리시 일리동 123-4</p>
+				<p>대표전화 02-345-6789</p>
+				<p>사업자 등록번호 123-45-67890</p>
+			</div>
+			<div class='f60 text-right'>
+				<p>가상의 프로젝트입니다.</p>
+				<p>hyeonjg@g.seoultech.ac.kr</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
