@@ -1,230 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>일리 95주년</title>
-	<style type="text/css">
+	<title>FAKE ILLY 95th anniversary webdesign project</title>
 
-	@font-face {
-    font-family: 'KBIZHanmaumMyungjo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumMyungjo.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-		@font-face {
-    font-family: 'InkLipquid';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-	@font-face {
-    font-family: 'KCC-eunyoung';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-		@font-face {
-    font-family: 'SUIT-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+	<meta name='description' content='일리의 95주년 기념 캠페인을 주제로 진행한 가상 웹페이지 디자인 프로젝트입니다.'>
+	<meta name='keywords' content='illy, web design, web publishing, 웹디자인, 웹퍼블리싱, fake project, 가상 프로젝트'>
+	<meta name='URL' content=''>
 	
-		html{
-			font-family: "SUIT-Regular";
-			font-size:1rem; line-height: 1.5;
-			--main-color: #E92626;
-			--sub-color: lightyellow;
-			word-break: keep-all;
-			scroll-behavior: smooth;
-		}
 
-		body,h1,h2,h3,h4,h5,p,ul{margin: 0; padding: 0;}
-		h1,h2,h3{line-height: 1.3;}
-		h1{font-family: KBIZHanmaumMyungjo; font-size: 5rem;}
-		h2{font-size: 3rem; line-height: 70px; margin: 10px 0px;}
-		h3{font-family: KCC-eunyoung; font-size: 4rem;
-			padding: 10px 0px;}
-		h4{font-size: 1.3rem;
-			margin: 10px 0px;}
-		h5{font-size: 1.6rem; margin: 10px 0px;}
-		p{font-size: 1rem; line-height: 32px;}
-
-		.wrap{
-			width: 800px; margin: auto; display: table;
-		}
-		.flex{
-			display: flex; justify-content: space-around;}
-		.flex-nav{display: flex; justify-content: space-between;
-			align-items: center}
-		.blank{height: 200px;}
-		.blank-nav{height: 138px;}
-		.blank-s{height: 50px;}
-		.fix{position: fixed; top:0; left:0; right:0; z-index: 5}
-
-		.h500{height: 500px;}
-		.h300{height: 300px;}
-		.f60{width:60%; padding:20px;}
-		.f50{width:50%; padding:20px;}
-		.f40{width:40%; padding:20px;}
-		.f33{width:33%; padding:20px;}
-		.f25{width:25%; padding:20px;}
-		.p10{padding: 10px 0px;}
-		.v-center{display: table-cell; vertical-align: middle;}
-		.top-padding{padding-top: 20px;}
-		.top-padding2{padding-top: 40px;}
-
-		.full-img{width: 100%;}
-		.text-center{text-align: center;}
-		.text-right{text-align: right;}
-
-		.t-white{color:white;}
-		.t-main{color:var(--main-color);}
-
-		.bg-header{
-			background: url(source/header_coffee.gif);
-			background-size:100%;
-			object-fit: cover; overflow:hidden;
-		}
-		.bg-main{background: var(--main-color);}
-		.bg-sub{background: var(--sub-color);}
-		.bg-black{background: black;}
-		.bg-flavor1{
-			position: relative;
-			background: url(source/flavor_1_bg_w.jpg);
-			background-size:100%;
-			object-fit: cover; overflow:hidden;
-		}
-		.bg-flavor2{
-			background: url(source/flavor_2_bg_w.jpg);
-			background-size:100%;
-			object-fit: cover; overflow:hidden;
-		}
-		.bg-flavor3{
-			background: url(source/flavor_3_bg_w.jpg);
-			background-size:100%;
-			object-fit: cover; overflow:hidden;
-		}
-
-		.bullet{
-			position: fixed; top:35%; left:5%;
-			height:400px;
-			display: flex; z-index: 5;
-			flex-direction: column; align-items: center;
-		}
-		.bullet a{
-			text-decoration: none;
-			font-family: KCC-eunyoung; font-size: 1.5rem;
-			color: black; text-shadow: 0px 0px 18px white;
-			text-align: left;
-			padding: 50px 0px;
-		}
-		.bullet a:hover{
-			color: var(--main-color);
-		}
-
-		nav{padding: 25px 0px;}
-		nav ul li{list-style: none; margin:10px;}
-		nav ul li:hover{
-			color: var(--main-color);
-		}
-		nav .flex{ justify-content: center;}
-		.nav-f2{width: 20%}
-		.nav-f6{width: 60%}
-
-		header div a{
-			text-align: center;
-			color: white; text-decoration: none;
-			padding: 10px 40px;
-			border: 1px solid white;
-			border-radius: 10px;
-			position: absolute; top:65%; left:46%;
-		}
-		header div a:hover{
-			color: rgba(0,0,0,0);
-			background: white;
-			color: var(--main-color);
-		}
-		.moving-text{
-			animation: moving-text 1s ;
-		}
-		@keyframes moving-text{
-			from{padding-left: 50px;}
-			to{padding-left: 0px;}
-		}
-		.moving-text2{
-			animation: moving-text 2s;
-		}
-		@keyframes moving-text2{
-			from{padding-left: 100px;}
-			to{padding-left: 0px;}
-		}
-
-		.img-history{
-			display: block; margin: auto;
-			width: 300px; height: 300px;
-		}
-
-		.img-slide input[id*='slide']{display: none;}
-		.img-slide .slide-wrap{
-			max-width: 800px;
-			margin: auto;
-			overflow: hidden;
-		}
-		.img-slide .slide-li{
-			white-space: nowrap; font-size: 0;
-		}
-		.img-slide .slide-li li{
-			display: inline-block; vertical-align: middle;
-			width:100%; transition:all .5s;
-		}
-		.img-slide .slide-li li a{
-			display: block; position: relative;
-		}
-		.img-slide .slide-li li a img{
-			width:100%;
-		}
-		.img-slide .slide-li label{
-			position: absolute; z-index: 4;
-			top:50%; 
-			transform: translateY(-50%);
-			padding: 50px; cursor: pointer;
-		}
-		.img-slide .slide-li .slide-left{
-			left: 30px;
-			background: url('source/slide_left.png') center center / 100%;
-		}
-		.img-slide .slide-li .slide-right{
-			right: 30px;
-			background: url('source/slide_right.png') center center / 100%;
-		}
-		.img-slide [id='slide1']:checked ~ .slide-wrap .slide-li li {transform: translateX(0%);}
-		.img-slide [id='slide2']:checked ~ .slide-wrap .slide-li li {transform: translateX(-100%);}
-		.img-slide [id='slide3']:checked ~ .slide-wrap .slide-li li {transform: translateX(-200%);}
-
-		.img-flavor{width:294px; height:248px;}
-
-		#shops a{
-			text-align: center;
-			color: black; text-decoration: none;
-			padding: 10px 40px; margin: 30px 0px;
-			border: 1px solid black;
-			border-radius: 10px;
-		}
-		#shops a:hover{
-			color: rgba(0,0,0,0);
-			background: var(--main-color);
-			color: black;
-			border: 1px solid var(--main-color);
-		}
-
-		footer{background: #2E2E2E; color: white; padding: 20px 0px;}
-		footer ul li{list-style: none;}
-
-
-	</style>
+	<link rel='stylesheet' type='text/css' href='./css/style.css'>
 </head>
 
 <body>
@@ -237,7 +21,7 @@
 
 	<section class='fix'>
 	<section class='bg-main'>
-		<div class='wrap text-center p10'>
+		<div class='wrap text-center p10 t-white'>
 			<p>95주년 특별 패키지 판매 종료까지 6일!</p>
 		</div>
 	</section>
@@ -258,7 +42,7 @@
 				<li>세트</li>
 				<li>브랜드</li>
 			</ul>
-			<ul class='nav-f2 flex'>
+			<ul class='nav-f2 flex t-small'>
 				<li>장바구니</li>
 				<li>로그인</li>
 			</ul>
@@ -271,7 +55,7 @@
 
 	<header class='bg-header'>
 		<div class='wrap h500'>
-			<div class='v-center t-white'>
+			<div class='v-center t-main'>
 				<h1 class='moving-text'>95주년을 기념합니다</h1>
 				<h4 class='moving-text2'>일리가 커피와 함께해온 시간을 소개합니다.</h4>
 			</div>
@@ -281,9 +65,9 @@
 
 	<div class='blank'></div>
 
-	<section class='bg-sub'>
+	<section class='bg-coffee'>
 		<div class='wrap h500'>
-			<div class='text-center v-center'>
+			<div class='text-center v-center t-white'>
 			<h2>완벽한 커피 한 잔의 즐거움을 추구하다</h2>
 			<p>2028년, 올해로 일리는 95주년을 맞이합니다.<br>일리는 늘 감사의 마음을 담아 여러분과 함께<br>기념일을 축하하기 위해 여러 활동을 이어왔습니다.<br>부디 이번에도 커피 한 잔과 함께<br>일리의 이야기를 즐겨주시기 바랍니다.</p>
 		</div>
@@ -296,7 +80,6 @@
 		<div class='wrap'>
 			<div class='text-center'>
 				<h3>illy's history</h3>
-				<hr style='border: solid 1px'>
 				<h4>일리의 역사를 소개합니다.</h4>
 			</div>
 			<div class='blank-s'></div>
@@ -390,12 +173,15 @@
 				checked>
 				<input type='radio' name='slide' id='slide2'>
 				<input type='radio' name='slide' id='slide3'>
+				<input type='radio' name='slide' id='slide4'>
+				<input type='radio' name='slide' id='slide5'>
+				<input type='radio' name='slide' id='slide6'>
 
 				<div class='slide-wrap'>
 					<ul class='slide-li'>
 						<li>
 							<a>
-								<label for='slide3' class='slide-left'></label>
+								<label for='slide6' class='slide-left'></label>
 								<img src='source/art_1.png'>
 								<label for='slide2' class='slide-right'></label>
 							</a>
@@ -411,6 +197,27 @@
 							<a>
 								<label for='slide2' class='slide-left'></label>
 								<img src='source/art_3.png'>
+								<label for='slide4' class='slide-right'></label>
+							</a>
+						</li>
+						<li>
+							<a>
+								<label for='slide3' class='slide-left'></label>
+								<img src='source/art_4.png'>
+								<label for='slide5' class='slide-right'></label>
+							</a>
+						</li>
+						<li>
+							<a>
+								<label for='slide4' class='slide-left'></label>
+								<img src='source/art_5.png'>
+								<label for='slide6' class='slide-right'></label>
+							</a>
+						</li>
+						<li>
+							<a>
+								<label for='slide5' class='slide-left'></label>
+								<img src='source/art_6.png'>
 								<label for='slide1' class='slide-right'></label>
 							</a>
 						</li>
@@ -422,9 +229,9 @@
 
 	<div class='blank'></div>
 
-	<section>
-		<div class='wrap'>
-			<div class='text-center v-center'>
+	<section class='bg-main'>
+		<div class='wrap h300'>
+			<div class='text-center v-center t-white'>
 			<h2>일리와 예술을 떼 놓을 수는 없다는 사실,<br>느껴지시나요?<br>그래서 준비했습니다.</h2>
 			</div>
 		</div>
@@ -436,7 +243,6 @@
 		<div class='wrap'>
 			<div class='text-center'>
 				<h3>package</h3>
-				<hr style='border: solid 1px'>
 				<h4>95주년 기념 특별 패키지를 소개합니다.</h4>
 			</div>
 			<div class='blank-s'></div>
@@ -449,7 +255,7 @@
 	<section class='bg-main t-white'>
 		<div class='wrap h300'>
 			<div class='text-center v-center'>
-				<h3>일리의 대표 블렌드<br>클라시코, 인텐소, 디카페인 3종을<br>95주년 한정판 에디션으로!</h3>
+				<h2>일리의 대표 블렌드<br>클라시코, 인텐소, 디카페인 3종을<br>95주년 한정판 에디션으로!</h2>
 			</div>
 		</div>
 	</section>
@@ -460,7 +266,6 @@
 		<div class='wrap'>
 			<div class='text-center'>
 				<h3>illy blend</h3>
-				<hr style='border: solid 1px'>
 				<h4>일리의 오리지널 블렌드를 소개합니다.</h4>
 			</div>
 		</div>
@@ -469,13 +274,13 @@
 	<div class='blank-s'></div>
 
 	<section class='bg-flavor1'>
-		<div class='flex wrap h300'>
+		<div class='flex wrap h400 w600'>
 			<div class='wrap'>
 			<img class='img-flavor v-center' src='source/flavor_1.png'>
 			</div>
 			<div class='wrap'>
 			<div class='text-center v-center'>
-				<h3>클라시코</h3>
+				<h2>클라시코</h2>
 				<h4>카라멜 오렌지꽃 자스민</h4>
 				<p>어울리는 메뉴<br>카페라떼, 오렌지라떼</p>
 			</div>
@@ -483,13 +288,11 @@
 		</div>
 	</section>
 
-	<div class='blank-s'></div>
-
 	<section class='bg-flavor2'>
-		<div class='flex wrap h300'>
+		<div class='flex wrap h400 w600'>
 			<div class='wrap'>
 			<div class='text-center v-center'>
-				<h3>인텐소</h3>
+				<h2>인텐소</h2>
 				<h4>코코아 건과일</h4>
 				<p>어울리는 메뉴<br>아메리카노, 카페모카</p>
 			</div>
@@ -500,16 +303,14 @@
 		</div>
 	</section>
 
-	<div class='blank-s'></div>
-
 	<section class='bg-flavor3'>
-		<div class='flex wrap h300'>
+		<div class='flex wrap h400 w600'>
 			<div class='wrap'>
 			<img class='img-flavor v-center' src='source/flavor_3.png'>
 			</div>
 			<div class='wrap'>
 			<div class='text-center v-center'>
-				<h3>디카페인</h3>
+				<h2>디카페인</h2>
 				<h4>카라멜 구운 빵 초콜릿</h4>
 				<p>어울리는 메뉴<br>콜드브루, 아인슈페너</p>
 			</div>
@@ -520,19 +321,19 @@
 	<div id='shop' class='blank'></div>
 
 	<section id='shops'>
-		<div class='flex wrap'>
+		<div class='flex wrap w600'>
 			<div class='f33 text-center'>
-				<img src='source/box_3.jpg'>
+				<img class='img-shop' src='source/box_3.png'>
 				<h5>3종 세트</h5>
 				<a>담기</a>
 			</div>
 			<div class='f33 text-center'>
-				<img src='source/box_2.jpg'>
+				<img class='img-shop' src='source/box_2.png'>
 				<h5>2종 세트</h5>
 				<a>담기</a>
 			</div>
 			<div class='f33 text-center'>
-				<img src='source/box_1.jpg'>
+				<img class='img-shop' src='source/box_1.png'>
 				<h5>1종 세트</h5>
 				<a>담기</a>
 			</div>
@@ -589,10 +390,12 @@
 				<p>대표전화 02-345-6789</p>
 				<p>사업자 등록번호 123-45-67890</p>
 			</div>
-			<div class='f60 text-right'>
-				<p>가상의 프로젝트입니다.</p>
-				<p>hyeonjg@g.seoultech.ac.kr</p>
-			</div>
+			
+				<div class='f60'>
+					<p>가상의 프로젝트입니다.</p>
+					<p>hyeonjg@g.seoultech.ac.kr</p>
+				</div>
+			
 		</div>
 	</footer>
 </body>
