@@ -38,8 +38,8 @@
 		body,h1,h2,h3,h4,h5,p,ul{margin: 0; padding: 0;}
 		h1,h2,h3{line-height: 1.3;}
 		h1{font-family: SejonghospitalBold; font-size: 5rem;}
-		h2{font-size: 3rem; line-height: 70px; margin: 10px 0px;}
-		h3{font-family: MapoHongdaeFreedom; font-size: 4rem;
+		h2{font-family:SejonghospitalBold; font-size: 3rem; line-height: 70px; margin: 10px 0px;}
+		h3{font-family: SejonghospitalBold; font-size: 4rem;
 			padding: 0px 0px;}
 		h4{font-size: 1.3rem;
 			margin: 5px 0px;}
@@ -60,6 +60,7 @@
 		.fix{position: fixed; top:0; left:0; right:0; z-index: 5}
 
 		.w600{width: 600px;}
+		.h600{height: 600px;}
 		.h500{height: 500px;}
 		.h400{height: 400px;}
 		.h300{height: 300px;}
@@ -85,6 +86,7 @@
 			background: url(../source/header_coffee5.gif);
 			background-size:100%;
 			object-fit: cover; overflow:hidden;
+			background-attachment: fixed;
 		}
 		.bg-main{background: var(--main-color);}
 		.bg-sub{background: var(--sub-color);}
